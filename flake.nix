@@ -18,9 +18,28 @@
         # NodeJS environment
         fixedNode = pkgs.nodejs_24;
 
-        checkProject = pkgs.writeShellScriptBin "check_project" ''
+        playwright_flake_version = pkgs.playwright.version;
+
+        playwright_npm_version = (pkgs.lib.importJSON (frontend/package-lock.json))
+          .packages
+          ."node_modules/@playwright/test"
+          .version;
+
+        checkPlaywrightVersion = pkgs.writeShellScriptBin "check_playwright_version" ''
           set -e
 
+          if [ "${playwright_flake_version}" = "${playwright_npm_version}" ]; then
+            echo "Using playwright ${playwright_flake_version} in both flake and npm dependencies"
+          else
+            echo "Using playwright ${playwright_flake_version} in flake and playwright ${playwright_npm_version} in npm dependencies"
+            echo "This is an error, please fix the npm version to match the flake version in package.json"
+            exit 1
+          fi
+        '';
+
+        checkProject = pkgs.writeShellScriptBin "check_project" ''
+          set -e
+          
           pushd backend
             echo "::group::sqlx migrations checks"
               echo "Create the database"
@@ -54,9 +73,13 @@
 
           pushd frontend
             echo "::group::Frontend checks"
+              check_playwright_version
+
               npm ci
               npm run generate-api
               npm run lint
+              npm run build
+              npm run test
             echo "::endgroup::"
           popd
         '';
@@ -201,7 +224,7 @@
 
           # When modifying npm dependencies, replace the hash with pkgs.lib.fakeHash
           # then run `nix build .#frontend`. Use the hash in the error to replace the value.
-          npmDepsHash = "sha256-FwAXwkbIYbcXB8C3y+kXkXWoFr2L2aIlKezJF+XWYmc=";
+          npmDepsHash = "sha256-818Wbh3ix7BRT2w4spWSMtxxhjLJr3WLHEB3MsCBo9I=";
 
           installPhase = ''
             runHook preInstall
@@ -238,6 +261,7 @@
               rustfmt
               clippy
               # Various scripts
+              checkPlaywrightVersion
               checkProject
               regenApi
               startDevEnv
@@ -252,8 +276,12 @@
               process-compose
               # PostgreSQL and PostGIS
               (postgresql_16.withPackages (p: with p; [postgis]))
+              # Playwright browsers for E2E
+              playwright-driver.browsers
             ];
             DATABASE_URL = "postgres://postgres:postgres@localhost:5432/safehaven";
+            PLAYWRIGHT_BROWSERS_PATH = "${playwright-driver.browsers}";
+            PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS = "true";
           };
         }
     );

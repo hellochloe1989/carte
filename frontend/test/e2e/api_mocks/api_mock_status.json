@@ -1,0 +1,29 @@
+{
+    "status": "ok",
+    "general": {
+        "title": "Carte Fransgenre",
+        "subtitle": "Carte collaborative privée",
+        "logo_url": "https://fransgenre.fr/assets/images/image20.png",
+        "information": "<h2>Mentions légales</h2><p>Vous pouvez trouver les mentions légales et les CGU sur notre site principal :<ul><li><a href=\"https://fransgenre.fr/#mentions-legales\">Mentions légales fransgenre.fr</a></li><li><a href=\"https://fransgenre.fr/#cgu-carte\">Conditions Générales d&#39;Utilisation de la carte</a></li></ul></p><h2>Soutenir notre travail</h2><p>La carte Fransgenre est un travail bénévole incluant une dizaine de personnes qui travaillent dessus pour mettre à jour les données, modérer les commentaires ou s&#39;assurer simplement qu&#39;elle fonctionne bien !</p><p><a href=\"https://www.helloasso.com/associations/fransgenre/formulaires/1\">Faire un don à l&#39;association Fransgenre</a></p><p>En plus de ce travail bénévole, l&#39;infrastructure qui fait tourner la carte coûte de manière mensuelle à l&#39;association dont les seuls revenus sont vos dons !</p><p>Si vous désirez nous soutenir dans notre travail pour que demain il soit encore possible d&#39;accéder à la carte, vous pouvez vous rendre sur notre page de don HelloAsso.</p><h2>Nous contacter</h2><p>Vous pouvez nous écrire en français 🇫🇷 ou en anglais 🇬🇧 selon la langue qui est la plus confortable pour vous.<ul><li>✉️ Mail : contact@fransgenre.fr</li><li>📱 SMS* : 07 69 42 10 81</li><li>Twitter : <a href=\"https://twitter.com/Fransgenre\">https://twitter.com/Fransgenre</a></li><li>Facebook : <a href=\"https://www.facebook.com/Fransgenre\">https://www.facebook.com/Fransgenre</a></li><li>Instagram : <a href=\"https://instagram.com/fransgenre\">https://instagram.com/fransgenre</a></li></ul></p>",
+        "redirect_url": "https://fransgenre.fr/#lien-expire"
+    },
+    "init_popup": {
+        "popup": "<p>Le lien de cette carte ainsi que ses informations sont privées pour la protection des contributeur‧ices et des praticien‧nes.</p><p>Ne partagez pas ce lien. Redirigez vers nous toute personne ayant besoin d’un accès. (via le lien public : <a href=\"https://fransgenre.fr/#carte\">https://fransgenre.fr/#carte</a>)</p><p>Pour plus d'informations, rendez-vous ici : <a href=\"https://fransgenre.fr/#pq-carte-prive\">Pourquoi la carte est-elle privée ?</a></p><p>Cette carte est collaborative: elle recense les retours d&#39;expériences de toute personne y ayant contribué. Il ne s&#39;agit pas d&#39;un annuaire de recommandations de l&#39;association Fransgenre. Pensez à lire les commentaires et informations générales.</p>",
+        "popup_check_text": "Je ne partagerai pas le lien et <a href=\"https://fransgenre.fr/#cgu-carte\">j'accepte les Conditions Générales d'Utilisation (CGU) de la carte</a>"
+    },
+    "cartography_init": {
+        "center_lat": 47,
+        "center_lng": 2,
+        "zoom": 6
+    },
+    "cartography_source": {
+        "light_map_url": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+        "dark_map_url": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+        "light_map_attributions": "Map data © OpenStreetMap contributors",
+        "dark_map_attributions": "Map data © OpenStreetMap contributors"
+    },
+    "safe_mode": {
+        "enabled": false,
+        "hcaptcha_sitekey": ""
+    }
+}

@@ -1,0 +1,977 @@
+{
+    "signed_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZXJtcyI6eyJmYW1pbGllc19wb2xpY3kiOnsiYWxsb3dfYWxsIjpmYWxzZSwiYWxsb3dfbGlzdCI6WyIxOTA3MGVkNi0yN2Y5LTQwZTItYWRiNi1mNWY4MTU4NjkwMTEiXSwiZm9yY2VfZXhjbHVkZSI6W119LCJjYXRlZ29yaWVzX3BvbGljeSI6eyJhbGxvd19hbGwiOnRydWUsImFsbG93X2xpc3QiOltdLCJmb3JjZV9leGNsdWRlIjpbXX0sInRhZ3NfcG9saWN5Ijp7ImFsbG93X2FsbCI6dHJ1ZSwiYWxsb3dfbGlzdCI6W10sImZvcmNlX2V4Y2x1ZGUiOltdfSwiZ2VvZ3JhcGhpY19yZXN0cmljdGlvbnMiOm51bGwsImNhbl9saXN0X2VudGl0aWVzIjp0cnVlLCJjYW5fbGlzdF93aXRob3V0X3F1ZXJ5Ijp0cnVlLCJjYW5fbGlzdF93aXRoX2ZpbHRlcnMiOnRydWUsImNhbl9saXN0X3dpdGhfZW51bV9jb25zdHJhaW50cyI6dHJ1ZSwiY2FuX2FjY2Vzc19lbnRpdHkiOnRydWUsImNhbl9hY2Nlc3NfY29tbWVudHMiOnRydWUsImNhbl9hZGRfZW50aXR5Ijp0cnVlLCJjYW5fYWRkX2NvbW1lbnQiOnRydWV9LCJmYW1fcHJpdl9pZHgiOnsiMTkwNzBlZDYtMjdmOS00MGUyLWFkYjYtZjVmODE1ODY5MDExIjpbXX0sImV4cCI6MTc1NTY0NDQwOCwiaWF0IjoxNzU1NjQ0Mjg4fQ.Hs2q_qE0mv-HRotwdqB8jiyPAPcYoxziMcSZUpRFL2Y",
+    "families": [
+        {
+            "id": "19070ed6-27f9-40e2-adb6-f5f815869011",
+            "title": "CEC",
+            "icon_hash": "587f0e457076e4a0a9c746eb17774732",
+            "entity_form": {
+                "title": "Changements états civils",
+                "help": null,
+                "fields": [
+                    {
+                        "key": "general_contact_information",
+                        "display_name": "Informations de contact",
+                        "help": null,
+                        "field_type": "MultiLineText",
+                        "field_type_metadata": null,
+                        "indexed": false,
+                        "privately_indexed": false,
+                        "mandatory": false,
+                        "user_facing": true,
+                        "form_page": 1,
+                        "form_weight": 1,
+                        "display_weight": 1,
+                        "categories": null
+                    }
+                ]
+            },
+            "comment_form": {
+                "title": "Changement d'état civil",
+                "help": null,
+                "fields": [
+                    {
+                        "key": "private_contact_mean",
+                        "display_name": "Moyen de contact privé",
+                        "help": null,
+                        "field_type": "SingleLineText",
+                        "field_type_metadata": {
+                            "format": null
+                        },
+                        "indexed": false,
+                        "privately_indexed": false,
+                        "mandatory": false,
+                        "user_facing": false,
+                        "form_page": 1,
+                        "form_weight": 2,
+                        "display_weight": 2,
+                        "categories": null
+                    },
+                    {
+                        "key": "type_of_request",
+                        "display_name": "Type de demande",
+                        "help": null,
+                        "field_type": "EnumSingleOption",
+                        "field_type_metadata": {
+                            "options": [
+                                {
+                                    "label": "Prénoms",
+                                    "value": "0"
+                                },
+                                {
+                                    "label": "Mention de genre",
+                                    "value": "1"
+                                },
+                                {
+                                    "label": "Prénoms et mention de genre",
+                                    "value": "2"
+                                }
+                            ]
+                        },
+                        "indexed": false,
+                        "privately_indexed": false,
+                        "mandatory": false,
+                        "user_facing": true,
+                        "form_page": 1,
+                        "form_weight": 3,
+                        "display_weight": 3,
+                        "categories": null
+                    },
+                    {
+                        "key": "was_adult",
+                        "display_name": "Était majeur·e",
+                        "help": null,
+                        "field_type": "Boolean",
+                        "field_type_metadata": null,
+                        "indexed": false,
+                        "privately_indexed": false,
+                        "mandatory": true,
+                        "user_facing": true,
+                        "form_page": 1,
+                        "form_weight": 4,
+                        "display_weight": 4,
+                        "categories": null
+                    },
+                    {
+                        "key": "name_was_already_changed",
+                        "display_name": "Le nom avait-t-il déjà été changé ?",
+                        "help": null,
+                        "field_type": "Boolean",
+                        "field_type_metadata": null,
+                        "indexed": false,
+                        "privately_indexed": false,
+                        "mandatory": true,
+                        "user_facing": true,
+                        "form_page": 1,
+                        "form_weight": 5,
+                        "display_weight": 5,
+                        "categories": null
+                    },
+                    {
+                        "key": "provided_documents",
+                        "display_name": "Documents fournis",
+                        "help": null,
+                        "field_type": "EnumMultiOption",
+                        "field_type_metadata": {
+                            "options": [
+                                {
+                                    "label": "Témoignage de proche",
+                                    "value": "0"
+                                },
+                                {
+                                    "label": "Témoignage Pro/Scolaire",
+                                    "value": "1"
+                                },
+                                {
+                                    "label": "Documents médicaux",
+                                    "value": "2"
+                                },
+                                {
+                                    "label": "Photographies",
+                                    "value": "3"
+                                },
+                                {
+                                    "label": "Décision de CPEC",
+                                    "value": "4"
+                                },
+                                {
+                                    "label": "Factures",
+                                    "value": "5"
+                                },
+                                {
+                                    "label": "Autres",
+                                    "value": "6"
+                                }
+                            ]
+                        },
+                        "indexed": false,
+                        "privately_indexed": false,
+                        "mandatory": false,
+                        "user_facing": true,
+                        "form_page": 1,
+                        "form_weight": 6,
+                        "display_weight": 6,
+                        "categories": null
+                    },
+                    {
+                        "key": "list_of_events",
+                        "display_name": "Liste des événements",
+                        "help": null,
+                        "field_type": "EventList",
+                        "field_type_metadata": {
+                            "event_types": [
+                                {
+                                    "color": "neutral",
+                                    "label": "Dépôt de dossier",
+                                    "value": "0"
+                                },
+                                {
+                                    "color": "neutral",
+                                    "label": "Audience au service d'état civil",
+                                    "value": "10"
+                                },
+                                {
+                                    "color": "success",
+                                    "label": "Réponse positive du service d'état civil",
+                                    "value": "11"
+                                },
+                                {
+                                    "color": "fail",
+                                    "label": "Réponse négative du service d'état civil",
+                                    "value": "12"
+                                },
+                                {
+                                    "color": "warning",
+                                    "label": "Transfert au procureur",
+                                    "value": "13"
+                                },
+                                {
+                                    "color": "success",
+                                    "label": "Réponse du procureur positive",
+                                    "value": "14"
+                                },
+                                {
+                                    "color": "fail",
+                                    "label": "Réponse du procureur négative",
+                                    "value": "15"
+                                },
+                                {
+                                    "color": "warning",
+                                    "label": "Appel de la décision du procureur",
+                                    "value": "16"
+                                },
+                                {
+                                    "color": "success",
+                                    "label": "Appel de la décision du procureur réalisé avec succès",
+                                    "value": "17"
+                                },
+                                {
+                                    "color": "fail",
+                                    "label": "Appel de la décision du procureur refusé",
+                                    "value": "18"
+                                },
+                                {
+                                    "color": "neutral",
+                                    "label": "Audience au tribunal",
+                                    "value": "20"
+                                },
+                                {
+                                    "color": "success",
+                                    "label": "Acceptation par le tribunal",
+                                    "value": "21"
+                                },
+                                {
+                                    "color": "fail",
+                                    "label": "Refus par le tribunal",
+                                    "value": "22"
+                                },
+                                {
+                                    "color": "warning",
+                                    "label": "Appel à la décision du tribunal",
+                                    "value": "23"
+                                },
+                                {
+                                    "color": "success",
+                                    "label": "Appel de la décision réalisé avec succès",
+                                    "value": "24"
+                                },
+                                {
+                                    "color": "fail",
+                                    "label": "Appel de la décision réalisé refusé",
+                                    "value": "25"
+                                },
+                                {
+                                    "color": "neutral",
+                                    "label": "État final inconnu",
+                                    "value": "100"
+                                }
+                            ]
+                        },
+                        "indexed": false,
+                        "privately_indexed": false,
+                        "mandatory": false,
+                        "user_facing": true,
+                        "form_page": 1,
+                        "form_weight": 7,
+                        "display_weight": 7,
+                        "categories": null
+                    }
+                ]
+            },
+            "sort_order": 2,
+            "version": 2
+        }
+    ],
+    "categories": [
+        {
+            "id": "46754554-0a7e-4fc1-93ee-ec2baedd3949",
+            "title": "Mairie",
+            "family_id": "19070ed6-27f9-40e2-adb6-f5f815869011",
+            "default_status": true,
+            "icon_hash": "f3c721d6a49b9c38c459dce7437f60ef",
+            "fill_color": "#214b94",
+            "border_color": "#6d87b5",
+            "version": 2
+        },
+        {
+            "id": "7ee7b197-af2c-4329-94bf-6edd4aa8281e",
+            "title": "Tribunal Judiciaire",
+            "family_id": "19070ed6-27f9-40e2-adb6-f5f815869011",
+            "default_status": true,
+            "icon_hash": "2c75bdf369c326a87572a39aca273d43",
+            "fill_color": "#381a0d",
+            "border_color": "#4d372d",
+            "version": 2
+        }
+    ],
+    "allowed_categories": [
+        "46754554-0a7e-4fc1-93ee-ec2baedd3949",
+        "7ee7b197-af2c-4329-94bf-6edd4aa8281e"
+    ],
+    "allowed_tags": [
+        "69d7dc64-b002-469f-b60e-2fcc68b5b9c9",
+        "ab8a2e58-b074-4458-ae09-f452d84417e3",
+        "0902266d-e24d-4cc2-a97e-b24b26e452bf",
+        "73aa5aba-ca5c-47f4-bdbb-1b3f7a71557a",
+        "d049e32e-78b3-499a-b3a2-31cc0259a46b",
+        "21f01d1a-5395-4ab0-a613-404cd1fd9ac5",
+        "94ee565e-00c3-4992-811b-4304cdc05c4e",
+        "20de957f-d535-41b6-bfd7-838bd9f8f86e",
+        "b20f9363-9521-4cdd-9f78-94ab80ba8b70",
+        "a1344567-5508-4a0e-8f7e-82f4fdb604f4",
+        "0a8506ac-8a7d-4357-a3d6-df1dc96a5d6b",
+        "8003131d-83ec-4ec8-8dab-217b78bb38a7",
+        "5da08cd2-5407-4725-a9c6-f0e2177efedf",
+        "1925c9ca-3d10-4dea-a91a-32faee52430a",
+        "b265c13e-0b43-4dc3-a43a-13726b5c3144",
+        "733ed7db-6129-4b14-a665-9e565f62eb2c",
+        "dbe466eb-01ee-4ade-bb11-7e21754552d7",
+        "110b6da4-6e9e-40d5-844e-294903c4a0d8",
+        "d559110c-b2f4-404c-860d-a97238515772",
+        "5f35b995-21ed-4f9a-b3d5-7d097edcf746",
+        "6d185a11-553c-4908-8662-1e297d70bc71",
+        "b5643898-06f2-4831-8538-308515ce8dfc",
+        "17e18ba8-b32e-4aad-9e2e-3b80a6b0039f",
+        "c54b806e-6d34-477c-8fbc-97713d3157e5",
+        "2172b489-3797-4ca1-bffb-dd5bad21d0cb",
+        "c5513c3e-ce18-4e23-bbb5-3809a54ed3fb",
+        "5ada988b-b42a-445b-829f-a026423e4042",
+        "cee7ccb5-04a8-4c0c-a0e6-bf7c9dc2485d",
+        "74fafb05-6d76-4094-8868-e68a732fdd1f",
+        "2c06955e-f9c3-46d6-aea4-1de2bc3af40a",
+        "38e700e0-94ec-4972-859b-1e20e0d2832b",
+        "c5ce4c9a-801b-4718-83d7-83dcf23abf77",
+        "49111ed2-a5bd-4298-9a63-3699c84a2865",
+        "8925f385-ddeb-477d-b1fa-c81cf12d81ba",
+        "d5f5cbaf-2e04-4bc8-b86a-110c152bee48",
+        "9c15368c-55c6-4e76-b03f-db3210a68c85",
+        "2aa93077-46d1-4aef-a44e-2471686fd45e",
+        "d64350ef-6a25-405c-a3c8-289813d415f7",
+        "0a3a03a7-6ad5-4d73-ae82-98f85a7bb24a",
+        "5100c86d-b2a0-438f-b05c-8e150ef3ce34",
+        "3db64cd7-feea-4792-aa4a-69442d5e072d",
+        "3b9563d9-e6d2-40e8-bee8-e5d840c1b394",
+        "1c7cc84a-903f-491d-9be8-cafc124052a4",
+        "26e97031-2ab7-4af2-8f1d-9c83a2f8834c",
+        "de7c1497-91fb-4331-9796-8d40c0215faa",
+        "66b85369-26dd-4194-aad5-f1960e450757",
+        "1dbb6038-e53a-475a-950f-47792b248a2a",
+        "ad237a56-0ff7-4a4f-bc31-c34ac460e353",
+        "8658ad31-eca7-494b-a157-1bebd6e1a3e0",
+        "10d9d98b-6eba-4f21-8c93-af2756f194ef",
+        "603dc45d-3c4e-472e-9e59-3e209fad0467",
+        "d31c7766-a167-4a2f-beef-5ada69bc8caa",
+        "fb522043-c051-42f6-a8ee-c94f13b4972f",
+        "b3436e75-120e-484b-bd6b-83fa86f8ca6b",
+        "1be23171-8337-45b3-a90e-77f0ef02af1e",
+        "51a79ac6-babf-4436-9772-7e818e80b719"
+    ],
+    "permissions": {
+        "can_list_entities": true,
+        "can_list_without_query": true,
+        "can_list_with_filters": true,
+        "can_list_with_enum_constraints": true,
+        "can_access_entity": true,
+        "can_access_comments": true,
+        "can_add_entity": true,
+        "can_add_comment": true
+    },
+    "tags": [
+        {
+            "id": "69d7dc64-b002-469f-b60e-2fcc68b5b9c9",
+            "title": "langue : arabe",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "langue : arabe",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "ab8a2e58-b074-4458-ae09-f452d84417e3",
+            "title": "langue : arménien",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "langue : arménien",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "0902266d-e24d-4cc2-a97e-b24b26e452bf",
+            "title": "TDAH / TSA ",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "TDAH / TSA ",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "73aa5aba-ca5c-47f4-bdbb-1b3f7a71557a",
+            "title": "langue : français",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "langue : français",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "d049e32e-78b3-499a-b3a2-31cc0259a46b",
+            "title": "langue : grec",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "langue : grec",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "21f01d1a-5395-4ab0-a613-404cd1fd9ac5",
+            "title": "langue : italien",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "langue : italien",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "94ee565e-00c3-4992-811b-4304cdc05c4e",
+            "title": "langue : japonais",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "langue : japonais",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "20de957f-d535-41b6-bfd7-838bd9f8f86e",
+            "title": "langue : néerlandais",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "langue : néerlandais",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "b20f9363-9521-4cdd-9f78-94ab80ba8b70",
+            "title": "langue : norvégien",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "langue : norvégien",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "a1344567-5508-4a0e-8f7e-82f4fdb604f4",
+            "title": "langue : portugais",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "langue : portugais",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "0a8506ac-8a7d-4357-a3d6-df1dc96a5d6b",
+            "title": "langue : roumain",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "langue : roumain",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "8003131d-83ec-4ec8-8dab-217b78bb38a7",
+            "title": "langue : russe",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "langue : russe",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "5da08cd2-5407-4725-a9c6-f0e2177efedf",
+            "title": "langue : serbe",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "langue : serbe",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "1925c9ca-3d10-4dea-a91a-32faee52430a",
+            "title": "langue : turc",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "langue : turc",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "b265c13e-0b43-4dc3-a43a-13726b5c3144",
+            "title": "langue : vietnamien",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "langue : vietnamien",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "733ed7db-6129-4b14-a665-9e565f62eb2c",
+            "title": "mammectomie / mastectomie / torsoplastie",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "mammectomie / mastectomie / torsoplastie",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "dbe466eb-01ee-4ade-bb11-7e21754552d7",
+            "title": "mammoplastie / augmentation mammaire",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "mammoplastie / augmentation mammaire",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "110b6da4-6e9e-40d5-844e-294903c4a0d8",
+            "title": "langue : anglais",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "langue : anglais",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "d559110c-b2f4-404c-860d-a97238515772",
+            "title": "chirurgie de féminisation de la voix , vfs",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "chirurgie de féminisation de la voix , vfs",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "5f35b995-21ed-4f9a-b3d5-7d097edcf746",
+            "title": "formé·e par Fransgenre",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "formé·e par Fransgenre",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "6d185a11-553c-4908-8662-1e297d70bc71",
+            "title": "vulvoplastie",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "vulvoplastie",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "b5643898-06f2-4831-8538-308515ce8dfc",
+            "title": "primo prescription THSM",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "primo prescription THSM",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "17e18ba8-b32e-4aad-9e2e-3b80a6b0039f",
+            "title": "accès pmr",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "accès pmr",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "c54b806e-6d34-477c-8fbc-97713d3157e5",
+            "title": "chirurgie de masculinisation faciale , fms",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "chirurgie de masculinisation faciale , fms",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "2172b489-3797-4ca1-bffb-dd5bad21d0cb",
+            "title": "hystérectomie",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "hystérectomie",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "c5513c3e-ce18-4e23-bbb5-3809a54ed3fb",
+            "title": "Suivi gynécologique ",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "Suivi gynécologique ",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "5ada988b-b42a-445b-829f-a026423e4042",
+            "title": "orchidectomie",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "orchidectomie",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "cee7ccb5-04a8-4c0c-a0e6-bf7c9dc2485d",
+            "title": "chondrolaryngoplastie",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "chondrolaryngoplastie",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "74fafb05-6d76-4094-8868-e68a732fdd1f",
+            "title": "greffe capillaire ",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "greffe capillaire ",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "2c06955e-f9c3-46d6-aea4-1de2bc3af40a",
+            "title": "nb friendly ",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "nb friendly ",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "38e700e0-94ec-4972-859b-1e20e0d2832b",
+            "title": "réduction mammaire",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "réduction mammaire",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "c5ce4c9a-801b-4718-83d7-83dcf23abf77",
+            "title": "lipofilling",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "lipofilling",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "49111ed2-a5bd-4298-9a63-3699c84a2865",
+            "title": "vaginoplastie",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "vaginoplastie",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "8925f385-ddeb-477d-b1fa-c81cf12d81ba",
+            "title": "phalloplastie",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "phalloplastie",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "d5f5cbaf-2e04-4bc8-b86a-110c152bee48",
+            "title": "laser",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "laser",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "9c15368c-55c6-4e76-b03f-db3210a68c85",
+            "title": "chirurgie de féminisation faciale , ffs",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "chirurgie de féminisation faciale , ffs",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "2aa93077-46d1-4aef-a44e-2471686fd45e",
+            "title": "Envoie demandes d'ald",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "Envoie demandes d'ald",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "d64350ef-6a25-405c-a3c8-289813d415f7",
+            "title": "lsf",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "lsf",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "0a3a03a7-6ad5-4d73-ae82-98f85a7bb24a",
+            "title": "langue : allemand",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "langue : allemand",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "5100c86d-b2a0-438f-b05c-8e150ef3ce34",
+            "title": "langue : espagnol",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "langue : espagnol",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "3db64cd7-feea-4792-aa4a-69442d5e072d",
+            "title": "association LGBT généraliste",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "Cette association accueille toutes les personnes LGBT+ et n'est pas spécialisée dans l'accueil des personnes trans.",
+            "fill_color": "#a504c2",
+            "border_color": "#bd91ff",
+            "version": 2
+        },
+        {
+            "id": "3b9563d9-e6d2-40e8-bee8-e5d840c1b394",
+            "title": "association trans",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "Cette association est spécialisée dans l'accueil des personnes trans/en questionnement.",
+            "fill_color": "#0abf9e",
+            "border_color": "#75ffe3",
+            "version": 2
+        },
+        {
+            "id": "1c7cc84a-903f-491d-9be8-cafc124052a4",
+            "title": "collectif",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "Cette organisation n'a pas le statut légal d'association loi 1901. Cela ne l'empêche pas d'accueil du public ou de mener des actions",
+            "fill_color": "#ffef08",
+            "border_color": "#fff7ab",
+            "version": 2
+        },
+        {
+            "id": "26e97031-2ab7-4af2-8f1d-9c83a2f8834c",
+            "title": "électrolyse",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "de7c1497-91fb-4331-9796-8d40c0215faa",
+            "title": "prescription PreP",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "Prescription de Prophylaxie Pré-Exposition (traitement préventif VIH)",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 2
+        },
+        {
+            "id": "66b85369-26dd-4194-aad5-f1960e450757",
+            "title": "IVG (avortement) médicamenteuse",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "Interruption volontaire de grossesse (avortement) médicamenteuse",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "1dbb6038-e53a-475a-950f-47792b248a2a",
+            "title": "OK automédication/DIY",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "Accepte d'accompagner les personnes en automédication (DIY)",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "ad237a56-0ff7-4a4f-bc31-c34ac460e353",
+            "title": "asso diverses",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "",
+            "fill_color": "#7700ff",
+            "border_color": "#a356fc",
+            "version": 1
+        },
+        {
+            "id": "8658ad31-eca7-494b-a157-1bebd6e1a3e0",
+            "title": "RCA (reconnaissance conjointe anticipée)",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "10d9d98b-6eba-4f21-8c93-af2756f194ef",
+            "title": "suivi de grossesse",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 2
+        },
+        {
+            "id": "603dc45d-3c4e-472e-9e59-3e209fad0467",
+            "title": "cardiologue",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "d31c7766-a167-4a2f-beef-5ada69bc8caa",
+            "title": "langue : kabyle",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "fb522043-c051-42f6-a8ee-c94f13b4972f",
+            "title": "ophtalmologue",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "b3436e75-120e-484b-bd6b-83fa86f8ca6b",
+            "title": "Prudence recommandée",
+            "is_filter": true,
+            "is_primary_filter": true,
+            "default_filter_status": true,
+            "filter_description": "⚠️ Prudence recommandée",
+            "fill_color": "#db3742",
+            "border_color": "#d47389",
+            "version": 2
+        },
+        {
+            "id": "1be23171-8337-45b3-a90e-77f0ef02af1e",
+            "title": "tatouage médical",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 1
+        },
+        {
+            "id": "51a79ac6-babf-4436-9772-7e818e80b719",
+            "title": "métaidoïoplastie",
+            "is_filter": true,
+            "is_primary_filter": false,
+            "default_filter_status": true,
+            "filter_description": "métoidioplastie",
+            "fill_color": "#824261",
+            "border_color": "#deb9c9",
+            "version": 2
+        }
+    ]
+}
