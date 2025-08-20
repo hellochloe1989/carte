@@ -80,6 +80,8 @@
               npm ci
               npm run generate-api
               npm run lint
+              npm run build
+              npm run test
             echo "::endgroup::"
           popd
         '';
@@ -228,7 +230,7 @@
 
           # When modifying npm dependencies, replace the hash with pkgs.lib.fakeHash
           # then run `nix build .#frontend`. Use the hash in the error to replace the value.
-          npmDepsHash = "sha256-FwAXwkbIYbcXB8C3y+kXkXWoFr2L2aIlKezJF+XWYmc=";
+          npmDepsHash = "sha256-Al/d9trz5KXyiYC5ZZIAblLUpnsuT7CJOV/twtFVvrY=";
 
           installPhase = ''
             runHook preInstall
@@ -275,8 +277,12 @@
               process-compose
               # PostgreSQL and PostGIS
               (postgresql_16.withPackages (p: with p; [postgis]))
+              # Playwright browsers for E2E
+              playwright-driver.browsers
             ];
             DATABASE_URL = "postgres://postgres:postgres@localhost:5432/safehaven";
+            PLAYWRIGHT_BROWSERS_PATH = "${playwright-driver.browsers}";
+            PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS = "true";
           };
         }
     );
