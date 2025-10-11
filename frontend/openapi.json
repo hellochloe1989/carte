@@ -3472,11 +3472,17 @@
           "default_status",
           "fill_color",
           "border_color",
-          "version"
+          "version",
+          "created_at",
+          "updated_at"
         ],
         "properties": {
           "border_color": {
             "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
           },
           "default_status": {
             "type": "boolean"
@@ -3498,6 +3504,10 @@
           },
           "title": {
             "type": "string"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
           },
           "version": {
             "type": "integer",
@@ -4650,11 +4660,17 @@
           "default_filter_status",
           "fill_color",
           "border_color",
-          "version"
+          "version",
+          "created_at",
+          "updated_at"
         ],
         "properties": {
           "border_color": {
             "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
           },
           "default_filter_status": {
             "type": "boolean"
@@ -4678,6 +4694,10 @@
           },
           "title": {
             "type": "string"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
           },
           "version": {
             "type": "integer",
